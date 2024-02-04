@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+    <style>
+        #box{
+            height: 150px;
+            width: 150px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" ></div>
+    <button id="mybtn">Click Me</button>
+
+    <script >
+        const box=document.getElementById('box');
+        function handleBoxEvent(e){
+            alert('hover!!');
+            console.log(e);
+        }
+        box.addEventListener("mouseover" ,handleBoxEvent);
+        const btn=document.getElementById('mybtn');
+        btn.addEventListener("click",()=>{
+            alert('hello Event');
+        })
+    </script>
+</body>
+</html>

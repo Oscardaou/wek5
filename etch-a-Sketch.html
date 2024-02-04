@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="et-sk.css">
+</head>
+<body onload="drawGrid(rows)">
+    <header>
+        Etch-a-Sketch
+    </header>
+    <div class="sizeGrid">
+        Customize you Grid size
+        <input type="text" id="gridSize" size="16">
+        <p id="s"></p>
+        <button onclick="changeGridS()">Submit</button>
+        <button onclick="resset(16)">Resset Size</button>
+    </div>
+    <div class="container">
+        <input type="radio" id="black" name="color" value="black">black
+        <input type="radio" id="red" name="color" value="red" >Red
+        <input type="radio" id="blue" name="color" value="blue">Blue
+        <input type="radio" id="rainbow" name="color" value="Rainbow">Rainbow
+        <input type="radio" id="erase" name="color" value="erase">Eraser
+        <button id="clear" onclick="clearGrid()">Clear</button><br>
+    </div>
+    <div id="gridContainer"></div>
+        <footer>Oscar Daou</footer>
+        <script src="etch.js"></script>
+</body>
+</html>
